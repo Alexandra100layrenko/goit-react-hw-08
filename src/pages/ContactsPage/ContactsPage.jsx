@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchContacts, deleteContact,  editContact } from '../../redux/contacts/contactsOperations';
-import { setFilter } from '../../redux/filters/filtersSlice';
+import { fetchContacts, deleteContact,  editContact } from '../../redux/contacts/operations';
+import { setFilter } from '../../redux/filters/slice';
 import { useEffect, useState } from 'react';
 import { Button, TextField, List, ListItem, Modal, Box } from '@mui/material';
 import { toast } from 'react-hot-toast';

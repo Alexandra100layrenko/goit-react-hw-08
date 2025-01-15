@@ -1,7 +1,7 @@
 import { AppBar, Toolbar, Button } from '@mui/material';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { logout } from '../../redux/auth/authOperations';
+import { logout } from '../../redux/auth/operations';
 
 const AppBarComponent = () => {
   const dispatch = useDispatch();

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { login } from '../../redux/auth/authOperations';
-import { selectIsLoggedIn } from '../../redux/auth/authSelectors';
+import { login } from '../../redux/auth/operations';
+import { selectIsLoggedIn } from '../../redux/auth/selectors';
 import s from './LoginForm.module.css';
 
 export const LoginForm = () => {

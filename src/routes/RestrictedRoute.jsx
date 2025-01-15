@@ -4,11 +4,7 @@ import { useSelector } from 'react-redux';
 const RestrictedRoute = () => {
   const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
 
-  if (isLoggedIn) {
-    return <Navigate to="/contacts" />;
-  }
-
-  return <Outlet />;
+  return isLoggedIn ? <Navigate to="/contacts" /> : <Outlet />;
 };
 
 export default RestrictedRoute;
