@@ -1,14 +1,16 @@
 import { AppBar, Toolbar, Button } from '@mui/material';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { logout } from '../../redux/auth/authOperations';
 
 const AppBarComponent = () => {
+  const dispatch = useDispatch();
   const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
 
   return (
     <AppBar position="static">
       <Toolbar>
-      <nav style={{ width: '100%' }}>
+        <nav style={{ width: '100%' }}>
           <ul
             style={{
               display: 'flex',
@@ -48,7 +50,10 @@ const AppBarComponent = () => {
                     </Link>
                   </li>
                   <li>
-                    <Button color="inherit" onClick={() => dispatch(logout())}>
+                    <Button
+                      color="inherit"
+                      onClick={() => dispatch(logout())}
+                    >
                       Logout
                     </Button>
                   </li>

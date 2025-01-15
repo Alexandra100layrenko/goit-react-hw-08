@@ -22,16 +22,17 @@ export const LoginForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
-
+  
     if (!email.trim() || !password.trim()) {
       setError('Все поля должны быть заполнены.');
       return;
     }
-
+  
     try {
       await dispatch(login({ email, password })).unwrap();
     } catch (err) {
-      setError('Неверные учетные данные. Пожалуйста, попробуйте снова.');
+      console.error('Ошибка при входе:', err);
+      setError(err.message || 'Неверные учетные данные. Пожалуйста, попробуйте снова.');
     }
   };
 
