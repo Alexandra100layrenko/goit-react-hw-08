@@ -1,0 +1,27 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #232323;
+}
+
+.nav li {
+    margin: 0 10px;
+  }
+  
+.nav a {
+    color: #232323;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+}
+  
+.nav a:hover {
+    text-decoration: underline;
+}
+
+.rightLinks{
+    display: flex;
+    
+}
