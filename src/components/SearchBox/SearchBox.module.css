@@ -1,0 +1,17 @@
+.searchBlock{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.search{
+    display: block;
+    border: 1px solid #9c9c9c;
+    border-radius: 4px;
+    margin-top: 8px;
+    min-width: 300px;
+    height: 24px;
+    &:hover{
+        border: 2px solid #1c68e2;
+    }
+}
